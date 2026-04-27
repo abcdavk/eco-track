@@ -3,6 +3,7 @@
 @import url("styles/global.css");
 @import url("styles/navbar.css");
 @import url("styles/hero_section.css");
+@import url("styles/why_track.css");
 
 #root {
   font-family: var(--sans);
