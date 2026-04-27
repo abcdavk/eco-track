@@ -35,7 +35,7 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: 'Google Sans', 'Segoe UI', Roboto, sans-serif;
+  --sans: 'Manrope', 'Segoe UI', Roboto, sans-serif;
   --heading: 'Times New Roman', Times, serif;
   --mono: ui-monospace, Consolas, monospace;
 }
