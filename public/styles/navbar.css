@@ -12,7 +12,6 @@
 .nav-inner {
   display: flex;
   align-items: center;
-  border-radius: 0px;
   border-width: 2px;
   position: relative;
   flex-wrap: wrap;
@@ -40,7 +39,7 @@
 
 .nav-action button {
   border: none;
-  border-radius: 8px;
+  border-radius: var(--round-sm);
   background: var(--green-400);
   color: var(--text-white);
   padding: 10px;
