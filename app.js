@@ -12,7 +12,7 @@ app.listen(3000, () => {
   console.log('Server berjalan di http://localhost:3000');
 });
 
-app.post('/calculate', (req, res) => {
+app.post('/calculate', (req, res) => { 
   res.json({
     success: true,
     message: "Calculation success!!"
