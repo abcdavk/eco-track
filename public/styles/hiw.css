@@ -1,0 +1,64 @@
+.hiw-container {
+  width: 100%;
+  background-color: var(--bg-100);
+}
+
+.hiw-inner {
+  display: flex;
+  align-items: center;
+  border-width: 2px;
+  position: relative;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-between;
+  max-width: 1280px;
+  height: 824px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.hiw-inner .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.hiw-inner .heading-container {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hiw-inner .title {
+  color: var(--green-500);
+  font-size: xx-large;
+  margin: 0;
+  font-weight: var(--bold-md);
+}
+
+.hiw-inner .hiw-grid {
+  grid-area: 2 / 1 / 3 / 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.hiw-inner .hiw-grid .div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: red;
+}
+.hiw-inner .hiw-grid .div2 {
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: blue;
+}
+.hiw-inner .hiw-grid .div3 {
+  grid-area: 1 / 3 / 2 / 4;
+  background-color: green;
+}

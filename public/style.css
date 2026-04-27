@@ -4,6 +4,7 @@
 @import url("styles/navbar.css");
 @import url("styles/hero_section.css");
 @import url("styles/why_track.css");
+@import url("styles/hiw.css");
 
 #root {
   font-family: var(--sans);
