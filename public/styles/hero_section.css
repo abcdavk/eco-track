@@ -37,7 +37,7 @@
 .hero-section-inner .right-content img {
   width: 597px;
   border-radius: var(--round-md);
-  box-shadow: 10px 10px var(--green-600);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   pointer-events: none;
   -webkit-user-drag: none; /* Prevents dragging in WebKit browsers */
   user-select: none;
@@ -101,7 +101,6 @@
   .hero-section-inner .content .right-content img {
     width: 936px;
     border-radius: 0;
-    box-shadow: none;
     pointer-events: none;
     -webkit-user-drag: none; /* Prevents dragging in WebKit browsers */
     user-select: none;
