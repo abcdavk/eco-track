@@ -151,13 +151,32 @@
   .clover-container {
     display: block;
   }
+  .clover-right {
+    margin-top: 20px;
+  }
+
+  .clover-left .clover-top {
+    height: 100%;
+  }
+  .clover-left .clover-bottom {
+    height: 100%;
+  }
+
+  .clover-right .clover-top {
+    height: 100%;
+    
+  }
+  .clover-right .clover-bottom {
+    height: 100%;
+  }
 }
 
 @media (max-width: 662px) {
+  .why-track-inner {
+    height: 100%;
+    padding-bottom: 56px;
+  }
   .why-track-inner .content {
     display: block;
-  }
-  .clover-right {
-    margin-top: 20px;
   }
 }
