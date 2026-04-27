@@ -77,7 +77,13 @@
 .clover-container .title {
   font-weight: var(--bold-lg);
   font-size: x-large;
+  line-height: 5px;
 }
+
+.clover-container .body {
+  font-weight: lighter;
+}
+
 
 .clover-left {
   grid-area: 1 / 1 / 2 / 2;
@@ -108,6 +114,11 @@
   padding: 32px;
   height: 172px;
 }
+
+.clover-left .clover-top .title {
+  color: var(--green-400);
+}
+
 .clover-left .clover-bottom {
   grid-area: 2 / 1 / 3 / 2;
   background-color: var(--green-500);
@@ -132,5 +143,7 @@
   border-radius: var(--round-md);
   padding: 32px;
   height: 172px;
-  
+}
+.clover-right .clover-bottom .title {
+  color: var(--green-400);
 }
