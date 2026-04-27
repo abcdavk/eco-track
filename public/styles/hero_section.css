@@ -92,7 +92,7 @@
   }
   
   .hero-section-inner .content .right-content { 
-    display: block;
+    display: flex;
     position: relative;
     z-index: 0;
   }
