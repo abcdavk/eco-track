@@ -45,7 +45,7 @@
   padding: 10px;
   padding-left: 30px;
   padding-right: 30px;
-  font-size: var(--font-sm);
+  font-size: var(--font-md);
 }
 
 .nav-action button:hover {
@@ -140,6 +140,7 @@
     background: var(--green-400);
     border: none;
     color: var(--text-white);
+    font-size: var(--font-md);
   }
   .nav-inner {
     display: flex;
