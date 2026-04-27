@@ -9,6 +9,7 @@
   --green-300: #065F46;
   --green-400: #2D5A27;
   --green-500: #154212;
+  --green-600: #0e2c0c;
   --gray-100: #F2F4F1;
   --gray-100-a: #FAFAF9;
   --gray-200: #E7E9E6;
@@ -24,6 +25,10 @@
   --bold-sm: 400;
   --bold-md: 600;
   --bold-lg: 800;
+
+  --round-sm: 10px;
+  --round-md: 16px;
+  --round-lg: 24px;
 
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
