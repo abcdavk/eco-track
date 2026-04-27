@@ -3,6 +3,7 @@
   --text-h: #4c008a;
   --text-white: #fff;
   --bg-100: #FAFAF9;
+  --bg-alert: #FFDAD64D;
   --border: #222;
   --green-100: #BCF0AE;
   --green-200: #91F78E;
@@ -16,6 +17,8 @@
   --gray-300: #E1E3E0;
   --gray-300: #57534E;
   --gray-400: #42493E;
+
+  --red-500: #BA1A1A;
 
   --font-sm: 14px;
   --font-md: 16px;
