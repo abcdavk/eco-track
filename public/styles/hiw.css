@@ -34,7 +34,7 @@
   text-align: center;
 }
 
-.hiw-inner .title {
+.hiw-inner h2 {
   color: var(--green-500);
   font-size: xx-large;
   margin: 0;
@@ -46,19 +46,49 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
+  grid-column-gap: 32px;
   grid-row-gap: 0px;
 }
 
-.hiw-inner .hiw-grid .div1 {
+.hiw-inner .hiw-grid svg {
+  fill: var(--green-500);
+  background-color: var(--green-200);
+  width: 32px;
+  padding: 16px;
+  border-radius: var(--round-md);
+  margin-bottom: 16px;
+}
+
+.hiw-inner .hiw-grid .grid1 {
   grid-area: 1 / 1 / 2 / 2;
-  background-color: red;
+  background-color: var(--bg-100-a);
+  border: solid;
+  border-color: var(--gray-300);
+  border-width: 1px;
+  border-radius: var(--round-md);
+  padding: 32px;
 }
-.hiw-inner .hiw-grid .div2 {
+.hiw-inner .hiw-grid .grid2 {
   grid-area: 1 / 2 / 2 / 3;
-  background-color: blue;
+  background-color: var(--bg-100-a);
+  border: solid;
+  border-color: var(--gray-300);
+  border-width: 1px;
+  border-radius: var(--round-md);
+  padding: 32px;
 }
-.hiw-inner .hiw-grid .div3 {
+.hiw-inner .hiw-grid .grid3 {
   grid-area: 1 / 3 / 2 / 4;
-  background-color: green;
+  background-color: var(--bg-100-a);
+  border: solid;
+  border-color: var(--gray-300);
+  border-width: 1px;
+  border-radius: var(--round-md);
+  padding: 32px;
+}
+
+.hiw-inner .hiw-grid h3 {
+  font-size: x-large;
+  margin: 0;
+  color: var(--green-500);
 }
