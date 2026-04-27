@@ -1,0 +1,13 @@
+.hero-section-container {
+  width: 100%;
+  background-color: var(--bg-100);
+}
+.hero-section-inner {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 870px;
+  height: 870px;
+  padding: 8px 10px;
+}
