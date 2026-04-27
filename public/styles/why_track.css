@@ -77,7 +77,6 @@
 .clover-container .title {
   font-weight: var(--bold-lg);
   font-size: x-large;
-  line-height: 5px;
 }
 
 .clover-container .body {
@@ -112,7 +111,7 @@
   background-color: var(--gray-300);
   border-radius: var(--round-md);
   padding: 32px;
-  height: 172px;
+  height: 256px;
 }
 
 .clover-left .clover-top .title {
@@ -125,7 +124,7 @@
   border-radius: var(--round-md);
   color: var(--text-white);
   padding: 32px;
-  height: 172px;
+  height: 256px;
 }
 
 .clover-right .clover-top {
@@ -134,7 +133,7 @@
   border-radius: var(--round-md);
   color: var(--text-white);
   padding: 32px;
-  height: 172px;
+  height: 256px;
   
 }
 .clover-right .clover-bottom {
@@ -142,8 +141,23 @@
   background-color: var(--gray-300);
   border-radius: var(--round-md);
   padding: 32px;
-  height: 172px;
+  height: 256px;
 }
 .clover-right .clover-bottom .title {
   color: var(--green-400);
+}
+
+@media (max-width: 398px) {
+  .clover-container {
+    display: block;
+  }
+}
+
+@media (max-width: 662px) {
+  .why-track-inner .content {
+    display: block;
+  }
+  .clover-right {
+    margin-top: 20px;
+  }
 }
