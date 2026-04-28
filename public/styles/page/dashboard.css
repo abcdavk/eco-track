@@ -1,0 +1,17 @@
+.dashboard-container {
+  width: 100%;
+  background-color: var(--bg-100);
+}
+.dashboard-inner {
+  display: flex;
+  align-items: center;
+  border-width: 2px;
+  position: relative;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+  max-width: 1280px;
+  height: 824px;
+  margin: 0 auto;
+  padding: 16px;
+}
