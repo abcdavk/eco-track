@@ -38,7 +38,8 @@
   display: flex;
   justify-content: center;
 }
-.final-cta-inner .content-container .content .button button {
+.final-cta-inner .content-container .content .button a {
+  text-decoration: none;
   padding: 24px 48px;
   border-radius: var(--round-lg);
   font-size: var(--font-md);

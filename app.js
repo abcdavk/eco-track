@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/dashboard', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/page/dashboard.html'))
+  res.sendFile(path.join(__dirname, 'public', 'page', 'dashboard.html'));
 });
 
 app.post('/calculate', (req, res) => { 

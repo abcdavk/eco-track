@@ -37,7 +37,7 @@
   margin-right: auto;
 }
 
-.nav-action button {
+.nav-action .get-started-button {
   border: none;
   border-radius: var(--round-sm);
   background: var(--green-400);
@@ -46,13 +46,14 @@
   padding-left: 30px;
   padding-right: 30px;
   font-size: var(--font-md);
+  text-decoration: none;
 }
 
-.nav-action button:hover {
+.nav-action .get-started-button:hover {
   background: var(--green-500);
 }
 
-.nav-action a {
+.nav-action .login-button {
   color: var(--green-400);
   font-size: var(--font-md);
   text-decoration: none;
@@ -62,7 +63,7 @@
   display: none;
 }
 
-.nav-inner a:hover {
+.nav-inner .login-button:hover {
   color: var(--green-500);
 }
 

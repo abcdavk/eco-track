@@ -48,10 +48,11 @@
   gap: 10px;
 }
 
-.hero-section-inner .buttons button {
+.hero-section-inner .buttons a {
   border: none;
   border-radius: var(--round-lg);
   padding: 10px 20px;
+  text-decoration: none;
 }
 
 .hero-section-inner .buttons .primary-button {
