@@ -1,0 +1,36 @@
+footer {
+  width: 100%;
+  background-color: var(--gray-100);
+  border-top: solid;
+  border-width: 1px;
+  border-color: var(--gray-200);
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  border-width: 2px;
+  position: relative;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-between;
+  max-width: 1280px;
+  height: 128px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+footer .copyright h2 {
+  margin: 0;
+  color: var(--green-300);
+}
+
+footer .copyright p {
+  color: var(--gray-500);
+}
+
+footer .links a {
+  color: var(--gray-500);
+  text-decoration: none;
+  padding: 10px;
+}
