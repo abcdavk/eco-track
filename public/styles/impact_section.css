@@ -1,0 +1,47 @@
+.impact-section-container {
+  width: 100%;
+  background-color: var(--gray-100);
+}
+.impact-section-inner {
+  display: flex;
+  align-items: center;
+  border-width: 2px;
+  position: relative;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-between;
+  max-width: 1280px;
+  height: 824px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.impact-section-inner .bento {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.impact-section-inner .bento .main {
+    grid-column: span 3 / span 3;
+    background-color: red;
+}
+
+.impact-section-inner .bento .smart-tip {
+    grid-column: span 2 / span 2;
+    grid-column-start: 4;
+    background-color: blue;
+}
+
+.impact-section-inner .bento .local-insights {
+    grid-row-start: 2;
+    background-color: green;
+}
+
+.impact-section-inner .bento .stats {
+    grid-column: span 4 / span 4;
+    grid-row-start: 2;
+    background-color: yellow;
+}
+        

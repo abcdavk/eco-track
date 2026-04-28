@@ -5,6 +5,7 @@
 @import url("styles/hero_section.css");
 @import url("styles/why_track.css");
 @import url("styles/hiw.css");
+@import url("styles/impact_section.css");
 
 #root {
   font-family: var(--sans);
