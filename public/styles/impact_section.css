@@ -20,15 +20,15 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 8px;
+  gap: 24px;
 }
     
 .impact-section-inner .bento .main {
   grid-column: span 3 / span 3;
   background-color: var(--green-500);
-  border-radius: var(--round-md);
+  border-radius: var(--round-lg);
   color: var(--text-white);
-  padding: 32px;
+  padding: 56px 32px;
 }
 
 .impact-section-inner .progress-text {
@@ -67,13 +67,29 @@
 .impact-section-inner .bento .smart-tip {
   grid-column: span 2 / span 2;
   grid-column-start: 4;
-  background-color: blue;
+  background-color: var(--red-100);
+  border-radius: var(--round-lg);
+  height: 172px;
+  padding: 32px;
+}
+
+.impact-section-inner .bento .smart-tip svg {
+  width: 48px;
+}
+
+.impact-section-inner .bento .smart-tip .text {
+  margin: 0 10px;
+}
+
+.impact-section-inner .bento .smart-tip .text h3 {
+  margin: 0;
+  font-size: x-large;
 }
 
 .impact-section-inner .bento .local-insights {
   grid-row-start: 2;
   position: relative;
-  border-radius: var(--round-md);
+  border-radius: var(--round-lg);
   overflow: hidden;
   border: solid;
   border-width: 1px;
