@@ -6,6 +6,7 @@
 @import url("styles/why_track.css");
 @import url("styles/hiw.css");
 @import url("styles/impact_section.css");
+@import url("styles/final_cta.css");
 
 #root {
   font-family: var(--sans);
