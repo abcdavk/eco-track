@@ -8,6 +8,7 @@
 @import url("styles/sections/hiw.css");
 @import url("styles/sections/impact_section.css");
 @import url("styles/sections/final_cta.css");
+@import url("styles/page/dashboard.css");
 
 #root {
   font-family: var(--sans);
