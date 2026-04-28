@@ -31,6 +31,21 @@
   padding: 32px;
 }
 
+.impact-section-inner .progress-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.impact-section-inner .progress-container .title {
+  margin: 8px 0;
+}
+
+.impact-section-inner .progress-container .percentage {
+  margin-left: auto;
+  font-size: x-large;
+  margin: 0;
+}
+
 .impact-section-inner .progress {
   width: 100%;
   height: 18px;
