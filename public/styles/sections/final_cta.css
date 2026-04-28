@@ -1,8 +1,8 @@
-.final-cta-container {
+.home .final-cta-container {
   width: 100%;
   background-color: var(--bg-100);
 }
-.final-cta-inner {
+.home .final-cta-inner {
   display: flex;
   align-items: center;
   border-width: 2px;
@@ -15,7 +15,7 @@
   margin: 0 auto;
   padding: 16px;
 }
-.final-cta-inner .content-container {
+.home .final-cta-inner .content-container {
   background-color: var(--green-400);
   border-radius: var(--round-xl);
   color: var(--text-white);
@@ -25,20 +25,20 @@
   align-items: center;
   justify-content: center;
 }
-.final-cta-inner .content-container .content h2 {
+.home .final-cta-inner .content-container .content h2 {
   text-align: center;
   margin: 0;
   font-size: xx-large;
 }
-.final-cta-inner .content-container .content p {
+.home .final-cta-inner .content-container .content p {
   text-align: center;
   font-weight: lighter;
 }
-.final-cta-inner .content-container .content .button {
+.home .final-cta-inner .content-container .content .button {
   display: flex;
   justify-content: center;
 }
-.final-cta-inner .content-container .content .button a {
+.home .final-cta-inner .content-container .content .button a {
   text-decoration: none;
   padding: 24px 48px;
   border-radius: var(--round-lg);
