@@ -96,6 +96,9 @@
 
 
 @media (max-width: 1024px) {
+  .hiw-inner {
+    height: 100%;
+  }
   .hiw-inner .hiw-grid {
     grid-template-columns: repeat(2, 1fr);
   }
