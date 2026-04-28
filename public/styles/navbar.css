@@ -49,7 +49,6 @@
 }
 
 .nav-action button:hover {
-  cursor: pointer;
   background: var(--green-500);
 }
 
