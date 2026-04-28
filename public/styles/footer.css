@@ -15,7 +15,7 @@ footer .container {
   box-sizing: border-box;
   justify-content: space-between;
   max-width: 1280px;
-  height: 128px;
+  height: 100%;
   margin: 0 auto;
   padding: 16px;
 }
@@ -27,10 +27,25 @@ footer .copyright h2 {
 
 footer .copyright p {
   color: var(--gray-500);
+  margin: 0;
 }
 
-footer .links a {
+footer .links {
+  display: flex;
+}
+
+footer a {
   color: var(--gray-500);
   text-decoration: none;
-  padding: 10px;
+  margin-right: 10px;
+}
+
+footer .icons svg {
+  width: 32px;
+  fill: var(--gray-500);
+}
+
+footer .icons a {
+  margin-right: 0;
+  margin-left: 10px;
 }
