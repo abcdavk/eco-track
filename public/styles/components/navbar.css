@@ -1,12 +1,13 @@
 /* naverated CSS Menu */
-.home .home .nav-container {
+.home .nav-container {
   width: 100%;
   background-color: var(--bg-100);
   border-bottom: solid;
   border-width: 3px;
   border-color: var(--gray-100);
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
 }
 .home .nav-inner {
@@ -120,9 +121,6 @@
   text-decoration: none;
   transition: background .2s, color .2s;
   white-space: nowrap;
-}
-.home .nav-inner > ul > li > a:hover {
-  color: var(--green-500);
 }
 @media (max-width: 768px) {
   .home .nav-hamburger { display: flex; }
