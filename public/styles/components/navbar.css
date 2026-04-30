@@ -121,6 +121,9 @@
   transition: background .2s, color .2s;
   white-space: nowrap;
 }
+.nav-inner > ul > li > a:hover {
+  color: var(--green-500);
+}
 @media (max-width: 768px) {
   .nav-hamburger { display: flex; }
   .nav-action {
