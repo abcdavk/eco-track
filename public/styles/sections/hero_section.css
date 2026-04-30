@@ -83,6 +83,7 @@
     padding: 0;
     padding-top: 96px;
   }
+  
   .home .hero-section-container .content {
     display: block;
   }
@@ -106,5 +107,6 @@
     pointer-events: none;
     -webkit-user-drag: none; /* Prevents dragging in WebKit browsers */
     user-select: none;
+    opacity: 90%;
   }
 }

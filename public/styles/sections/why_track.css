@@ -153,25 +153,25 @@
 }
 
 @media (max-width: 398px) {
-  .clover-container {
+  .home .clover-container {
     display: block;
   }
-  .clover-right {
+  .home .clover-right {
     margin-top: 20px;
   }
 
-  .clover-left .clover-top {
+  .home .clover-left .clover-top {
     height: 100%;
   }
-  .clover-left .clover-bottom {
+  .home .clover-left .clover-bottom {
     height: 100%;
   }
 
-  .clover-right .clover-top {
+  .home .clover-right .clover-top {
     height: 100%;
     
   }
-  .clover-right .clover-bottom {
+  .home .clover-right .clover-bottom {
     height: 100%;
   }
 }
