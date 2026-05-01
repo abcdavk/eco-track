@@ -228,6 +228,7 @@
   }  
   .home .impact-section-inner .bento .smart-tip {
     grid-column: span 5 / span 5;
+    height: auto;
   }
   .home .impact-section-inner .bento .local-insights {
     grid-column: span 5 / span 5;

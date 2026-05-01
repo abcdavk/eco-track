@@ -25,3 +25,7 @@ button {
   font-family: var(--sans);
   cursor: pointer;
 }
+
+input {
+  font-family: var(--sans);
+}

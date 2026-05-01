@@ -1,17 +1,126 @@
-.dashboard .hero-section-container {
+.dashboard .carbon-calculator-container {
   width: 100%;
   background-color: var(--bg-100);
+  padding-top: 86px;
 }
-.dashboard .hero-section-inner {
+.dashboard .carbon-calculator-inner {
   display: flex;
-  align-items: center;
   border-width: 2px;
   position: relative;
   flex-wrap: wrap;
   box-sizing: border-box;
   justify-content: center;
-  max-width: 1280px;
-  height: 824px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 10px;
+}
+.dashboard .hero-section-container {
+  width: 100%;
+}
+.dashboard .hero-section-inner {
+  max-width: 512px;
+}
+.dashboard .hero-section-inner h1 {
+  margin: 0;
+  color: var(--green-500);
+}
+
+.dashboard .bento {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 32px;
+  width: 100%;
+}
+
+.dashboard .bento .form-container { 
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.dashboard .bento .form-inner {
+  padding: 32px;
+  background-color: var(--bg-100-a);
+  border-radius: var(--round-lg);
+  border: solid;
+  border-color: var(--gray-300);
+  border-width: 1px;
+}
+.dashboard .bento .form-inner .title {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.dashboard .bento .transportation .title svg {
+  width: 32px;
+  background-color: var(--green-200);
+  padding: 10px;
+  border-radius: var(--round-sm);
+}
+.dashboard .bento .energy-used .title svg {
+  width: 32px;
+  background-color: var(--red-100);
+  padding: 10px;
+  border-radius: var(--round-sm);
+}
+.dashboard .bento .form-inner h2 {
+  margin: auto 0;
+  color: var(--green-500);
+}
+.dashboard .bento .form-inner .form-input label {
+  display: block;
+  text-transform: uppercase;
+  font-weight: var(--bold-md);
+  color: var(--gray-400);
+  margin-top: 24px;
+  margin-bottom: 10px;
+  font-size: var(--font-sm);
+}
+.dashboard .bento .form-inner .form-input input {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  background-color: var(--gray-100);
+  border: solid;
+  border-color: var(--gray-300);
+  border-width: 1px;
+  border-radius: var(--round-sm);
+  padding: 10px;
+  font-size: large;
+}
+.dashboard .bento .form-inner .form-input .vehicle-type-buttons {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+.dashboard .bento .form-inner .form-input .vehicle-type-buttons button {
+  width: 50%;
+  height: 54px;
+  border: none;
+  border-radius: var(--round-sm);
+  background-color: var(--green-400);
+  color: var(--text-white);
+  font-size: medium;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.dashboard .bento .form-inner .form-input .vehicle-type-buttons button:hover {
+  background-color: var(--green-500);
+}
+.dashboard .bento .form-inner .form-input .vehicle-type-buttons button svg {
+  width: 24px;
+  background-color: transparent;
+  padding: 0;
+  fill: var(--text-white);
+}
+.dashboard .bento .form-inner .form-input .vehicle-type-buttons button span {
+  margin: auto 0;
+}
+
+
+.dashboard .bento .your-impact { 
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: blue;
 }
