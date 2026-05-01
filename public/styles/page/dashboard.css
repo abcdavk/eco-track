@@ -161,8 +161,9 @@
 .dashboard .bento .your-impact { 
   grid-area: 1 / 2 / 2 / 3;
   background-image: 
-    linear-gradient(rgba(45, 90, 39, 0.85), rgba(45, 90, 39, 0.85)),
-    url("../../img/your_impact.png");
+    linear-gradient(rgba(200, 200, 200, 0.5), rgba(200, 200, 200, 0.5)),
+    url("../../img/your_impact.webp");
+  filter: hue-rotate(280deg);
   background-position: center;
   border-radius: var(--round-lg);
   height: 436px;
@@ -171,9 +172,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: filter 3s;
 }
 .dashboard .bento .your-impact .title {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text)
 }
 .dashboard .bento .your-impact .title h2 {
   margin: 0;
@@ -186,10 +188,10 @@
 }
 .dashboard .bento .your-impact .visualizer svg {
   margin: auto;
-  fill: rgba(255, 255, 255, 0.6);
+  fill: var(--text);
 }
 .dashboard .bento .your-impact .visualizer p {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text);
   text-transform: uppercase;
   margin: auto;
 }
@@ -204,13 +206,13 @@
   width: 72%;
   height: 100%;
   border-radius: 999px;
-  background: #94F990;
+  background: #90c6f9;
   box-shadow: 0px 0px 15px 0px #94F99080;
   transform-origin: left center;
 }
 .dashboard .bento .your-impact .progress-text {
   width: 100%;
   display: flex;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text);
   justify-content: space-between;
 }
