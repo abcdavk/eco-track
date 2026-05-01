@@ -67,6 +67,10 @@
   margin: auto 0;
   color: var(--green-500);
 }
+.dashboard .bento .energy-used .form-input {
+  display: flex;
+  gap: 16px;
+}
 .dashboard .bento .form-inner .form-input label {
   display: block;
   text-transform: uppercase;
@@ -117,6 +121,40 @@
 }
 .dashboard .bento .form-inner .form-input .vehicle-type-buttons button span {
   margin: auto 0;
+}
+.dashboard .bento .form-container .submition {
+  display: flex;
+  gap: 16px;
+}
+.dashboard .bento .form-container .submition button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 256px;
+  height: 54px;
+  border: none;
+  background-color: var(--green-400);
+  border-radius: var(--round-xl);
+  color: var(--text-white);
+  font-size: large;
+  gap: 10px;
+}
+.dashboard .bento .form-container .submition button svg {
+  width: 24px;
+  fill: var(--text-white);
+}
+.dashboard .bento .form-container .submition a {
+  display: flex;
+  align-items: center;
+  border: none;
+  font-size: large;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+}
+.dashboard .bento .form-container .submition a svg {
+  width: 24px;
+  fill: var(--text);
 }
 
 
