@@ -1,10 +1,13 @@
 // Mobile menu toggle
-document.getElementById('nav-ham').addEventListener('click', () => {
-  var nav = document.getElementById('nav-inner');
-  var menu = document.getElementById('nav-menu');
-  var isOpen = menu.classList.toggle('open');
-  nav.classList.toggle('mobile-open', isOpen);
-});
+const nav_ham = document.getElementById('nav-ham');
+if (nav_ham) {
+  document.getElementById('nav-ham').addEventListener('click', () => {
+    var nav = document.getElementById('nav-inner');
+    var menu = document.getElementById('nav-menu');
+    var isOpen = menu.classList.toggle('open');
+    nav.classList.toggle('mobile-open', isOpen);
+  });
+}
  
 // Close menu when clicking outside
 document.addEventListener('click', (e) => {
