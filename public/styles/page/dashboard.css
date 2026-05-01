@@ -2,6 +2,7 @@
   width: 100%;
   background-color: var(--bg-100);
   padding-top: 86px;
+  height: 1200px;
 }
 .dashboard .carbon-calculator-inner {
   display: flex;
@@ -157,9 +158,39 @@
   fill: var(--text);
 }
 
+.dashboard .bento .right-container {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.dashboard .right-container .eco-tip {
+  display: flex;
+  align-items: start;
+  background-color: var(--gray-100);
+  border: solid;
+  border-radius: var(--round-lg);
+  border-color: var(--gray-300);
+  border-width: 1px;
+  padding: 24px 16px;
+  gap: 16px;
+  height: 72px;
+}
+.dashboard .right-container .eco-tip svg {
+  width: 46px;
+  fill: var(--green-500);
+}
+.dashboard .right-container .eco-tip .content h3 {
+  margin: 0;
+  color: var(--green-500);
+}
+.dashboard .right-container .eco-tip .content p {
+  margin: 0;
+  color: var(--gray-400);
+}
 
 .dashboard .bento .your-impact { 
-  grid-area: 1 / 2 / 2 / 3;
   background-image: 
     linear-gradient(rgba(200, 200, 200, 0.5), rgba(200, 200, 200, 0.5)),
     url("../../img/your_impact.webp");
