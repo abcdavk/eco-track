@@ -219,7 +219,7 @@
 }
 .dashboard .bento .your-impact .visualizer svg {
   margin: auto;
-  fill: rgba(50, 50, 50, 0.8);
+  fill: rgba(50, 50, 50, 0.5);
 }
 .dashboard .bento .your-impact .visualizer p {
   color: rgba(50, 50, 50, 0.8);
