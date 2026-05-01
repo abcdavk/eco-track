@@ -160,5 +160,57 @@
 
 .dashboard .bento .your-impact { 
   grid-area: 1 / 2 / 2 / 3;
-  background-color: blue;
+  background-image: 
+    linear-gradient(rgba(45, 90, 39, 0.85), rgba(45, 90, 39, 0.85)),
+    url("../../img/your_impact.png");
+  background-position: center;
+  border-radius: var(--round-lg);
+  height: 436px;
+  padding: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dashboard .bento .your-impact .title {
+  color: rgba(255, 255, 255, 0.9);
+}
+.dashboard .bento .your-impact .title h2 {
+  margin: 0;
+}
+.dashboard .bento .your-impact .visualizer {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.dashboard .bento .your-impact .visualizer svg {
+  margin: auto;
+  fill: rgba(255, 255, 255, 0.6);
+}
+.dashboard .bento .your-impact .visualizer p {
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  margin: auto;
+}
+.dashboard .bento .your-impact .progress {
+  width: 100%;
+  height: 12px;
+  background: #FFFFFF33;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.dashboard .bento .your-impact .fill {
+  width: 72%;
+  height: 100%;
+  border-radius: 999px;
+  background: #94F990;
+  box-shadow: 0px 0px 15px 0px #94F99080;
+  transform-origin: left center;
+}
+.dashboard .bento .your-impact .progress-text {
+  width: 100%;
+  display: flex;
+  color: rgba(255, 255, 255, 0.6);
+  justify-content: space-between;
 }
