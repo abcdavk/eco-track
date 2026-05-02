@@ -231,10 +231,11 @@
 }
 .dashboard .bento .your-impact .progress {
   width: 100%;
-  height: 12px;
+  height: 18px;
   background: #FFFFFF33;
   border-radius: 999px;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 .dashboard .bento .your-impact .fill {
   width: 0%;
