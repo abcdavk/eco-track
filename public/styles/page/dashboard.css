@@ -220,6 +220,9 @@
 .dashboard .bento .your-impact .visualizer svg {
   margin: auto;
   fill: rgba(50, 50, 50, 0.5);
+  transform: rotate(45deg);
+  transform-origin: x-axis y-axis;
+  transition: transform 2s;
 }
 .dashboard .bento .your-impact .visualizer p {
   color: rgba(50, 50, 50, 0.8);

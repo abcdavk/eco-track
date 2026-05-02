@@ -12,6 +12,8 @@ function initCalculator() {
   const visualizer = document.getElementById('visualizer');
   const progressText = document.getElementById('progressText');
   const progressBarFill = document.getElementById('progressBarFill');
+  const dottedCircle = document.getElementById('dottedCircle');
+  const middleEmissionText = document.getElementById('middleEmissionText');
 
   if (!calculateBtn) return;
   if (!distanceTravel) return;
@@ -26,16 +28,21 @@ function initCalculator() {
   function formInputUpdate() {
     const hueRed = 150;
     const hueGreen = 280;
+
     let emission = countEmission(distanceTravel.value, "motor", acHours.value, laptopHours.value);
     emission = emission.toFixed(2)
 
     const percentage = Math.min(100, Math.max(0, (emission/max_daily_emission) * 100));
     const t = percentage/100;
     const hue = hueGreen + (hueRed - hueGreen) * t;
+    const rotation = 360 * t;
 
     progressBarFill.style.width = `${percentage}%`;
     progressText.innerHTML = `${emission} KG CO2e`;
     visualizer.style.filter = `hue-rotate(${hue}deg)`;
+
+    dottedCircle.style.transform = `rotate(${rotation}deg)`
+    middleEmissionText.innerHTML = `${percentage.toFixed()}%`
   }
 }
 
