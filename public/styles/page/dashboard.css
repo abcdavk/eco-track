@@ -192,7 +192,7 @@
 
 .dashboard .bento .your-impact { 
   background-image: 
-    linear-gradient(rgba(200, 200, 200, 0.5), rgba(200, 200, 200, 0.5)),
+    radial-gradient(rgba(255, 255, 255, 0.5), rgba(0, 100, 255, 0.2)),
     url("../../img/your_impact.webp");
   filter: hue-rotate(280deg);
   background-position: center;
