@@ -1,0 +1,19 @@
+.other .hero-section-container {
+  width: 100%;
+  background-color: var(--bg-100);
+}
+.other .hero-section-inner {
+  display: flex;
+  border-width: 2px;
+  position: relative;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-between;
+  max-width: 1280px;
+  height: 824px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.other .hero-section-container .content {
+}

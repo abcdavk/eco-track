@@ -9,7 +9,7 @@
 @import url("styles/sections/impact_section.css");
 @import url("styles/sections/final_cta.css");
 @import url("styles/page/dashboard.css");
-
+@import url("styles/page/other.css");
 #root {
   font-family: var(--sans);
 }
@@ -19,6 +19,7 @@ html, body {
   color: var(--text);
   overflow-x: hidden;
   max-width: 100%;
+  scroll-behavior: smooth;
 }
 
 button {

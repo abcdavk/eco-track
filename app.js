@@ -6,11 +6,9 @@ const app = express();
 app.use(express.json());
 
 // Serve static files dari folder public
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.get('/dashboard', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'page', 'dashboard.html'));
-});
+app.use(express.static(path.join(__dirname, 'public'), {
+  extensions: ['html']
+}));
 
 app.post('/calculate', (req, res) => {
   console.log(req.body)

@@ -81,7 +81,7 @@
     height: 100%;
     margin: 0 0;
     padding: 0;
-    padding-top: 96px;
+    padding-top: 72px;
   }
   
   .home .hero-section-container .content {
@@ -108,5 +108,11 @@
     -webkit-user-drag: none; /* Prevents dragging in WebKit browsers */
     user-select: none;
     opacity: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .hero-section-inner {
+    padding-top: 96px;
   }
 }
