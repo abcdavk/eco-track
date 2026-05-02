@@ -6,6 +6,7 @@ const max_daily_emission = 15.0;
 
 function initCalculator() {
   const calculateBtn = document.getElementById('calculateBtn');
+  const resetCalculation = document.getElementById('resetCalculation');
   const distanceTravel = document.getElementById('distanceTravel');
   const acHours = document.getElementById('acHours');
   const laptopHours = document.getElementById('laptopHours');
@@ -33,8 +34,13 @@ function initCalculator() {
   laptopHours.addEventListener('input', () => formInputUpdate());
 
   let vehicle_type = 'motor';
-  motorBtn.addEventListener('click', () => toggleBtnMotor())
-  carBtn.addEventListener('click', () => toggleBtnCar())
+  motorBtn.addEventListener('click', () => toggleBtnMotor());
+  carBtn.addEventListener('click', () => toggleBtnCar());
+
+  calculateBtn.addEventListener('click', () => onClickCalculate());
+  resetCalculation.addEventListener('click', () => onClickResetCalculation());
+
+  
 
   function toggleBtnMotor() {
     vehicle_type = 'motor';
@@ -60,12 +66,11 @@ function initCalculator() {
   }
 
   function formInputUpdate() {
-    let emission = countEmission(distanceTravel.value, vehicle_type, acHours.value, laptopHours.value);
+    let loadedEmission = loadCalculation();
+    let emission = countEmission(distanceTravel.value, vehicle_type, acHours.value, laptopHours.value) + loadedEmission;
     emission = emission.toFixed(2);
 
     const percentage = Math.min(100, Math.max(0, (emission/max_daily_emission) * 100));
-    const t = percentage/100;
-    const rotation = 360 * t;
     let hue;
     
     if (emission <= 2) {
@@ -85,9 +90,42 @@ function initCalculator() {
     const saturate = emission > 5 ? " saturate(300%)" : "";
     visualizer.style.filter = `hue-rotate(${hue}deg)${saturate}`;
 
-    dottedCircle.style.transform = `rotate(${rotation}deg)`;
     middleEmissionText.innerHTML = `${percentage.toFixed()}%`;
   }
+
+  function onClickCalculate() {
+    let loadedEmission = loadCalculation();
+    let emission = countEmission(distanceTravel.value, vehicle_type, acHours.value, laptopHours.value) + loadedEmission;
+
+    const percentage = Math.min(100, Math.max(0, (emission/max_daily_emission) * 100));
+    const t = percentage/100;
+    
+    const rotation = 360 * t;
+    dottedCircle.style.transform = `rotate(${rotation}deg)`;
+    
+    resetFormInput();
+    localStorage.setItem("emission", emission);
+  }
+  function loadCalculation() {
+    const emission = localStorage.getItem("emission") ?? "0";
+
+    return parseFloat(emission);
+  }
+
+  function onClickResetCalculation() {
+    dottedCircle.style.transform = `rotate(0deg)`;
+
+    localStorage.setItem("emission", 0);
+    resetFormInput();
+    formInputUpdate();
+  }
+
+  function resetFormInput() {
+    distanceTravel.value = '';
+    acHours.value = '';
+    laptopHours.value = '';
+  }
+
   toggleBtnMotor();
   formInputUpdate();
 }

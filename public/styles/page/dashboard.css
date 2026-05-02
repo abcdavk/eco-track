@@ -2,7 +2,7 @@
   width: 100%;
   background-color: var(--bg-100);
   padding-top: 86px;
-  height: 1200px;
+  height: auto;
 }
 .dashboard .carbon-calculator-inner {
   display: flex;
@@ -130,7 +130,7 @@
   display: flex;
   gap: 16px;
 }
-.dashboard .bento .form-container .submition button {
+.dashboard .bento .form-container .submition .calculate {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,11 +143,11 @@
   font-size: large;
   gap: 10px;
 }
-.dashboard .bento .form-container .submition button svg {
+.dashboard .bento .form-container .submition .calculate svg {
   width: 24px;
   fill: var(--text-white);
 }
-.dashboard .bento .form-container .submition a {
+.dashboard .bento .form-container .submition .reset {
   display: flex;
   align-items: center;
   border: none;
@@ -155,8 +155,10 @@
   gap: 10px;
   text-decoration: none;
   color: var(--text);
+  background-color: transparent;
+  border: none;
 }
-.dashboard .bento .form-container .submition a svg {
+.dashboard .bento .form-container .submition .reset svg {
   width: 24px;
   fill: var(--text);
 }
@@ -169,8 +171,6 @@
 }
 
 .dashboard .right-container .eco-tip {
-  display: flex;
-  align-items: start;
   background-color: var(--gray-100);
   border: solid;
   border-radius: var(--round-lg);
@@ -180,13 +180,18 @@
   gap: 16px;
   height: auto;
 }
+.dashboard .right-container .eco-tip .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard .right-container .eco-tip .heading h3 {
+  color: var(--green-400);
+  margin: 0;
+}
 .dashboard .right-container .eco-tip svg {
   max-width: 32px;
   fill: var(--green-400);
-}
-.dashboard .right-container .eco-tip .content h3 {
-  margin: 0;
-  color: var(--green-400);
 }
 .dashboard .right-container .eco-tip .content .checkbox {
   padding-top: 16px;
@@ -235,6 +240,22 @@
   background-color: var(--green-300);
   border-color: var(--green-400);
 }
+.dashboard .right-container .eco-tip .eco-tivation {
+  background-color: var(--bg-100);
+  border: solid;
+  border-color: var(--gray-300);
+  border-width: 1px;
+  border-radius: var(--round-md);
+
+  padding: 16px;
+  color: var(--green-400);
+}
+
+.dashboard .right-container .eco-tip .eco-tivation p {
+  margin: 0;
+}
+
+
 
 .dashboard .bento .your-impact {
   filter: hue-rotate(280deg);
@@ -298,11 +319,12 @@
   color: rgba(50, 50, 50, 0.8);
   justify-content: space-between;
 }
+
 @media (max-width: 398px) {
   .dashboard .bento .form-container .submition {
     display: block;
   }
-  .dashboard .bento .form-container .submition button {
+  .dashboard .bento .form-container .submition .calculate {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,7 +338,7 @@
     gap: 10px;
     margin-bottom: 10px;
   }
-  .dashboard .bento .form-container .submition a {
+  .dashboard .bento .form-container .submition .reset {
     display: flex;
     justify-content: center;
     align-items: center;
