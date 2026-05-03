@@ -21,10 +21,11 @@ Melalui Eco-Track, saya ingin meningkatkan kesadaran pengguna dengan memberikan 
 - [ ] B3. Smart Validation
 
 ## Cara Menjalankan Project
-1. Clone/extract project
-2. Jalankan `npm install`
-3. Jalankan dengan `npm run dev`
-4. Buka browser `http://localhost:3000`
+1. Clone project dengan `git clone https://github.com/abcdavk/eco-track`
+2. Buka folder project `cd eco-track`
+3. Jalankan `npm install`
+4. Jalankan dengan `npm run dev`
+5. Buka browser `http://localhost:3000`
 
 ## Troubleshoot
 ### 1. Jika server tidak berjalan
