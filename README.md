@@ -20,8 +20,6 @@ Melalui Eco-Track, saya ingin meningkatkan kesadaran pengguna dengan memberikan 
 - [ ] B2. The Carbon API
 - [ ] B3. Smart Validation
 
-(Centang [x] yang berhasil diselesaikan)
-
 ## Cara Menjalankan Project
 1. Clone/extract project
 2. Jalankan `npm install`
