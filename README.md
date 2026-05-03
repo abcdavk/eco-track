@@ -54,8 +54,8 @@ app.use(express.static(path.join(__dirname, 'public'), {
 app.listen(PORT, () => {
   console.log('Server berjalan di http://localhost:3000');
 });
-
 ```
+Coba jalankan di browser `http://localhost:3001`
 
 ### 2. CSS tidak ter-update
 Refresh halaman dengan `ctrl+shift+R`
