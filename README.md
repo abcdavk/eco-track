@@ -16,7 +16,7 @@ Melalui Eco-Track, saya ingin meningkatkan kesadaran pengguna dengan memberikan 
 - [X] A1. Real-time UI Feedback
 - [X] A2. Interactive Tips (Action Plan)
 - [ ] A3. Dynamic Result Display
-- [ ] B1. Static File Serving
+- [X] B1. Static File Serving
 - [ ] B2. The Carbon API
 - [ ] B3. Smart Validation
 

@@ -1,8 +1,27 @@
-const motor_k = 0.1;
-const car_k = 0.2;
-const ac_k = 0.5;
-const laptop_k = 0.05;
 const max_daily_emission = 15.0;
+
+async function sendData(distance, vehicle_type, ac_duration, laptop_duration) {
+  try {
+    const res = await fetch('/calculate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        "distance": parseInt(distance),
+        "vehicle_type": vehicle_type,
+        "ac_duration": parseInt(ac_duration),
+        "laptop_duration": parseInt(laptop_duration)
+      })
+    });
+
+    if (!res.ok) throw new Error('Request failed');
+
+    const { emission } = await res.json();
+
+    return emission;
+  } catch (error) {
+    console.error(error);    
+  }
+}
 
 function initCalculator() {
   const calculateBtn = document.getElementById('calculateBtn');
@@ -65,10 +84,12 @@ function initCalculator() {
     formInputUpdate();
   }
 
-  function formInputUpdate() {
+  async function formInputUpdate() {
+    let emission = await sendData(distanceTravel.value, vehicle_type.value, acHours.value, laptopHours.value);
     let loadedEmission = loadCalculation();
-    let emission = countEmission(distanceTravel.value, vehicle_type, acHours.value, laptopHours.value) + loadedEmission;
+    emission += parseInt(loadedEmission);
     emission = emission.toFixed(2);
+
 
     const percentage = Math.min(100, Math.max(0, (emission/max_daily_emission) * 100));
     let hue;
@@ -93,9 +114,11 @@ function initCalculator() {
     middleEmissionText.innerHTML = `${percentage.toFixed()}%`;
   }
 
-  function onClickCalculate() {
+  async function onClickCalculate() {
+    let emission = await sendData(distanceTravel.value, vehicle_type.value, acHours.value, laptopHours.value);
     let loadedEmission = loadCalculation();
-    let emission = countEmission(distanceTravel.value, vehicle_type, acHours.value, laptopHours.value) + loadedEmission;
+    emission += parseInt(loadedEmission);
+    emission = emission.toFixed(2);
 
     const percentage = Math.min(100, Math.max(0, (emission/max_daily_emission) * 100));
     const t = percentage/100;
@@ -138,11 +161,6 @@ function initCalculator() {
 
   toggleBtnMotor();
   formInputUpdate();
-}
-
-function countEmission(distance = 0, vehicle_type = "motor", ac_dur = 0, laptop_dur = 0) {
-   const vehicle_k = vehicle_type === "motor" ? motor_k : car_k;
-   return (distance*vehicle_k) + (ac_dur*ac_k) + (laptop_dur*laptop_k);
 }
 
 window.addEventListener('DOMContentLoaded', () => {
