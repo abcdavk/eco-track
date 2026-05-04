@@ -322,7 +322,7 @@
 
 .dashboard .bar-chart-container {
   width: 100%;
-  height: 512px;
+  height: 400px;
   padding: 32px;
   margin-top: 32px;
   background-color: var(--gray-100);
@@ -340,35 +340,48 @@
   color: var(--green-400);
 }
 
-.dashboard .bar-chart {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 32px;
-  grid-row-gap: 0px;
-  height: 100%;
-  align-items: end;
+.dashboard .bar-chart-container .chart {
+  display: table;
+  table-layout: fixed;
+
+  width: 60%;
+  max-width: 700px;
+  height: 200px;
+  margin: 0 auto;
+
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 2%, transparent 2%);
+  background-size: 100% 50px;
+  background-position: left top;
 }
 
-.dashboard .bar-chart-container .div1 { 
-  grid-area: 1 / 1 / 2 / 2;
-  background-color: var(--chart-red-100);
-  height: 90%;
+.dashboard .bar-chart-container .chart li {
+  position: relative;
+  display: table-cell;
+  vertical-align: bottom;
+  height: 200px;
 }
-.dashboard .bar-chart-container .div2 { 
-  grid-area: 1 / 2 / 2 / 3;
-  background-color: var(--chart-red-200);
-  height: 50%;
+
+.dashboard .bar-chart-container .chart li span {
+  margin: 0 1em;
+  display: block;
+
+  background: rgba(209, 236, 250, 0.75);
+
+  animation: draw 1s ease-in-out;
 }
-.dashboard .bar-chart-container .div3 { 
-  grid-area: 1 / 3 / 2 / 4;
-  background-color: var(--chart-yellow-100);
-  height: 50%;
-}
-.dashboard .bar-chart-container .div4 { 
-  grid-area: 1 / 4 / 2 / 5;
-  background-color: var(--chart-blue-100);
-  height: 80%;
+
+.dashboard .bar-chart-container .chart li span::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+
+  padding: 5px 1em 0;
+  display: block;
+  text-align: center;
+
+  content: attr(title);
+  word-wrap: break-word;
 }
 
 @media (max-width: 398px) {
