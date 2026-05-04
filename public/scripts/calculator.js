@@ -103,8 +103,18 @@ function initCalculator() {
     const rotation = 360 * t;
     dottedCircle.style.transform = `rotate(${rotation}deg)`;
     
-    resetFormInput();
     localStorage.setItem("emission", emission);
+    const motorDistanceData = parseInt(localStorage.getItem("motorDistanceData"));
+    const carDistanceData = parseInt(localStorage.getItem("carDistanceData"));
+    const acHoursData = parseInt(localStorage.getItem("acHoursData"));
+    const laptopHoursData = parseInt(localStorage.getItem("laptopHoursData"));
+
+    if (vehicle_type === "car") {
+      localStorage.setItem("carDistanceData", carDistanceData+parseInt(distanceTravel.value));
+    } else {
+      localStorage.setItem("motorDistanceData", motorDistanceData+parseInt(distanceTravel.value));
+    }
+    resetFormInput();
   }
   function loadCalculation() {
     const emission = localStorage.getItem("emission") ?? "0";
