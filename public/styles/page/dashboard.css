@@ -365,7 +365,7 @@
   margin: 0 1em;
   display: block;
 
-  background: rgba(209, 236, 250, 0.75);
+  background: var(--green-100);
 
   animation: draw 1s ease-in-out;
 }
