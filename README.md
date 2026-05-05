@@ -15,9 +15,9 @@ Melalui Eco-Track, saya ingin meningkatkan kesadaran pengguna dengan memberikan 
 ## Jalur Spesialisasi yang Dipilih
 - [X] A1. Real-time UI Feedback
 - [X] A2. Interactive Tips (Action Plan)
-- [ ] A3. Dynamic Result Display
+- [X] A3. Dynamic Result Display
 - [X] B1. Static File Serving
-- [ ] B2. The Carbon API
+- [X] B2. The Carbon API
 - [ ] B3. Smart Validation
 
 ## Cara Menjalankan Project
