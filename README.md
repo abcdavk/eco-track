@@ -66,4 +66,6 @@ Javascript adalah bahasa yang membingungkan, saya kesulitan dalam mem-parsing in
 
 Javascript juga tidak ada typesafe, jadi variabel bisa tanpa error di tulis tanpa di deklarasikan. Ini merepotkan karena harus bolak-balik ke browser untuk mengecek console. 
 
+Membuat Interactive Tips dan grafik batang juga sulit karena tidak ada di desain figma yang telah diberikan. Saya tidak mahir dalam membuat sesuatu tanpa referensi yang jelas.
+
 Selain itu, keterbatasan waktu juga membuat proses development tidak maksimal, tapi itulah tantangannya.
