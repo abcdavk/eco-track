@@ -61,3 +61,9 @@ Refresh halaman dengan `ctrl+shift+R`
 
 ## Tantangan yang Dihadapi
 Kesulitan yang saya hadapi saat membuat projek ini adalah saat membuat hero section agar responsive di mobile. Ide saya diawal adalah membuat gambar hutan yang semula jika di desktop di sebelah kanan menjadi wallpaper hero section. Background tersebut menyebabkan horizontal scrolling yang membuat tampilannya aneh. Saya benar benar tidak tau cara mengatasinya, jadi terpaksa harus menggunakan cara terakhir yaitu `overflow-x: hidden` di body.
+
+Javascript adalah bahasa yang membingungkan, saya kesulitan dalam mem-parsing input dari form yang bertipe string menjadi number. Kadang hasil pasingnya `NaN` (Not a Number), yang mana ketika `NaN` di operasikan dengan angka valid (misal `NaN + 10`) hasilnya selalu `NaN`. Ini menyebabkan semua variabel yang berhubungan dengan `NaN` akan bernilai `NaN` juga.
+
+Javascript juga tidak ada typesafe, jadi variabel bisa tanpa error di tulis tanpa di deklarasikan. Ini merepotkan karena harus bolak-balik ke browser untuk mengecek console. 
+
+Selain itu, keterbatasan waktu juga membuat proses development tidak maksimal, tapi itulah tantangannya.
