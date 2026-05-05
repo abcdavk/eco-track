@@ -173,10 +173,15 @@ function initCalculator() {
     localStorage.setItem('ac_duration', 0);
     localStorage.setItem('laptop_duration', 0);
     
-    carChart.style.height = `0%`
-    motorChart.style.height = `0%`
-    acChart.style.height = `0%`
-    laptopChart.style.height = `0%`
+    carChart.style.width = `0%`
+    motorChart.style.width = `0%`
+    acChart.style.width = `0%`
+    laptopChart.style.width = `0%`
+
+    carChart.innerHTML = `<p>0%</p>`
+    motorChart.innerHTML = `<p>0%</p>`
+    acChart.innerHTML = `<p>0%</p>`
+    laptopChart.innerHTML = `<p>0%</p>`
   }
 
   function updateBarChart() {
@@ -206,15 +211,33 @@ function initCalculator() {
     const acPercent = (ac_duration/total)*100;
     const laptopPercent = (laptop_duration/total)*100;
 
-    carChart.style.height = `${carPercent}%`
-    motorChart.style.height = `${motorPercent}%`
-    acChart.style.height = `${acPercent}%`
-    laptopChart.style.height = `${laptopPercent}%`
+    carChart.style.width = `${carPercent}%`
+    motorChart.style.width = `${motorPercent}%`
+    acChart.style.width = `${acPercent}%`
+    laptopChart.style.width = `${laptopPercent}%`
 
-    localStorage.setItem('car_distance', car_distance);
-    localStorage.setItem('motor_distance', motor_distance);
-    localStorage.setItem('ac_duration', ac_duration);
-    localStorage.setItem('laptop_duration', laptop_duration);
+    if (!Number.isNaN(carPercent) || !Number.isNaN(motorPercent) ||
+      !Number.isNaN(acPercent) || !Number.isNaN(laptopPercent)
+    ) {
+      localStorage.setItem('car_distance', car_distance);
+      localStorage.setItem('motor_distance', motor_distance);
+      localStorage.setItem('ac_duration', ac_duration);
+      localStorage.setItem('laptop_duration', laptop_duration);
+
+      carChart.innerHTML = `<p>${carPercent.toFixed()}%</p>`
+      motorChart.innerHTML = `<p>${motorPercent.toFixed()}%</p>`
+      acChart.innerHTML = `<p>${acPercent.toFixed()}%</p>`
+      laptopChart.innerHTML = `<p>${laptopPercent.toFixed()}%</p>`
+    } else {
+      carChart.style.width = `0%`
+      motorChart.style.width = `0%`
+      acChart.style.width = `0%`
+      laptopChart.style.width = `0%`
+      carChart.innerHTML = `<p>0%</p>`
+      motorChart.innerHTML = `<p>0%</p>`
+      acChart.innerHTML = `<p>0%</p>`
+      laptopChart.innerHTML = `<p>0%</p>`
+    }
   }
 
   toggleBtnMotor();
