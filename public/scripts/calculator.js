@@ -39,6 +39,11 @@ function initCalculator() {
 
   const motorBtn = document.getElementById('motorBtn');
   const carBtn = document.getElementById('carBtn');
+
+  const motorChart = document.getElementById('motorChart');
+  const carChart = document.getElementById('carChart');
+  const acChart = document.getElementById('acChart');
+  const laptopChart = document.getElementById('laptopChart');
   
   if (!calculateBtn || !distanceTravel ||
     !acHours || !laptopHours ||
@@ -85,7 +90,7 @@ function initCalculator() {
   }
 
   async function formInputUpdate() {
-    let emission = await sendData(distanceTravel.value, vehicle_type.value, acHours.value, laptopHours.value);
+    let emission = await sendData(distanceTravel.value, vehicle_type, acHours.value, laptopHours.value);
     let loadedEmission = loadCalculation();
     emission += parseInt(loadedEmission);
     emission = emission.toFixed(2);
@@ -115,7 +120,7 @@ function initCalculator() {
   }
 
   async function onClickCalculate() {
-    let emission = await sendData(distanceTravel.value, vehicle_type.value, acHours.value, laptopHours.value);
+    let emission = await sendData(distanceTravel.value, vehicle_type, acHours.value, laptopHours.value);
     let loadedEmission = loadCalculation();
     emission += parseInt(loadedEmission);
     emission = emission.toFixed(2);
@@ -137,6 +142,8 @@ function initCalculator() {
     } else {
       localStorage.setItem("motorDistanceData", motorDistanceData+parseInt(distanceTravel.value));
     }
+    updateBarChart();
+
     resetFormInput();
   }
   function loadCalculation() {
@@ -149,6 +156,7 @@ function initCalculator() {
     dottedCircle.style.transform = `rotate(0deg)`;
 
     localStorage.setItem("emission", 0);
+    resetBarChart();
     resetFormInput();
     formInputUpdate();
   }
@@ -159,8 +167,59 @@ function initCalculator() {
     laptopHours.value = '';
   }
 
+  function resetBarChart() {
+    localStorage.setItem('car_distance', 0);
+    localStorage.setItem('motor_distance', 0);
+    localStorage.setItem('ac_duration', 0);
+    localStorage.setItem('laptop_duration', 0);
+    
+    carChart.style.height = `0%`
+    motorChart.style.height = `0%`
+    acChart.style.height = `0%`
+    laptopChart.style.height = `0%`
+  }
+
+  function updateBarChart() {
+    let distance = parseInt(distanceTravel.value) || 0;
+    let ac_duration = parseInt(acHours.value) || 0;
+    let laptop_duration = parseInt(laptopHours.value) || 0;
+    
+    let ac_duration_saved = parseInt(localStorage.getItem('ac_duration')) || 0;
+    let laptop_duration_saved = parseInt(localStorage.getItem('laptop_duration')) || 0;
+
+    let car_distance = parseInt(localStorage.getItem('car_distance')) || 0;
+    let motor_distance = parseInt(localStorage.getItem('motor_distance')) || 0;
+
+    if (vehicle_type === 'car') {
+      car_distance += distance;
+    } else {
+      motor_distance += distance;
+    }
+
+    ac_duration += ac_duration_saved;
+    laptop_duration += laptop_duration_saved;
+
+    const total = car_distance + motor_distance + ac_duration + laptop_duration;
+
+    const carPercent = (car_distance/total)*100;
+    const motorPercent = (motor_distance/total)*100;
+    const acPercent = (ac_duration/total)*100;
+    const laptopPercent = (laptop_duration/total)*100;
+
+    carChart.style.height = `${carPercent}%`
+    motorChart.style.height = `${motorPercent}%`
+    acChart.style.height = `${acPercent}%`
+    laptopChart.style.height = `${laptopPercent}%`
+
+    localStorage.setItem('car_distance', car_distance);
+    localStorage.setItem('motor_distance', motor_distance);
+    localStorage.setItem('ac_duration', ac_duration);
+    localStorage.setItem('laptop_duration', laptop_duration);
+  }
+
   toggleBtnMotor();
   formInputUpdate();
+  updateBarChart();
 }
 
 window.addEventListener('DOMContentLoaded', () => {
