@@ -353,6 +353,11 @@
   background-color: var(--gray-300);
 }
 
+.dashboard .bar-chart-container .chart-wrapper .chart {
+  width: 100%;
+  padding-right: 8px;
+}
+
 .dashboard .bar-chart-container .chart-wrapper .legend div {
   padding: 32px 0;
   margin: 1px;
