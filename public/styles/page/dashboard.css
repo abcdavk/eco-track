@@ -171,7 +171,7 @@
 }
 
 .dashboard .right-container .eco-tip {
-  background-color: var(--gray-100);
+  background-color: var(--bg-100-a);
   border: solid;
   border-radius: var(--round-lg);
   border-color: var(--gray-300);
